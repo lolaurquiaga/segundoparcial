@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rafael Lozano-Hemmer - Ejercicio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/galeria.js" defer></script>
+    <script src="js/ejercicio.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Encabezado -->
+        <header>
+            <h1>Rafael Lozano-Hemmer</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="trayectoria.html">Trayectoria</a></li>
+                    <li><a href="obra.html">Obras</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Contenido principal -->
+        <main>
+        <!-- Galería dinámica -->
+        <section id="galeria">
+            <h2>Galería de obras</h2>
+            <div class="galeria-contenedor">
+                <!--Las imágenes se insertarán con JavaScript -->
+            </div>
+        </section>
+
+        <!-- Ejercicio de cálculo -->
+        <section id="ejercicio">
+            <h2>Ejercicio: Control de luces móviles</h2>
+            <p>Complete el formulario para ingresar los datos de las obras y luego calcule los resultados.</p>
+
+            <form id="formObras">
+                <label for="cantidadObras">Cantidad de obras:</label>
+                <input type="number" id="cantidadObras" name="cantidadObras" min="1" required>
+
+                <div id="datosObras">
+                    <!-- Campos generados dinámicamente -->
+                </div>
+
+                <button type="button" id="btnCargar">Cargar datos</button>
+                <button type="button" id="btnCalcular" disabled>Calcular resultados</button>
+                <button type="button" id="btnReiniciar" disabled>Reiniciar</button>
+            </form>
+
+            <section id="resultados">
+                <h3>Resultados</h3>
+                <div id="output"></div>
+            </section>
+        </section>
+        </main>
+
+        <!-- Pie de página -->
+        <footer>
+            <address>
+                <a href="mailto:rafael@artedigital.com">Contactarse</a>
+            </address>
+            <p>&copy; 2026 Proyecto Lozano-Hemmer. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+</body>
+</html>
