@@ -3,7 +3,7 @@ const obras = [
     { nombre: "Pulse Room", anio: 2006, imagen: "img/pulseRoom.jpg" },
     { nombre: "Vectorial Elevation", anio: 1999, imagen: "img/vectorialElevation.jpg" },
     { nombre: "Body Movies", anio: 2001, imagen: "img/bodyMovies.jpg" },
-    { nombre: "33 Questions per Minute", anio: 2000, imagen: "img/33QuestionsPerMinute.jpg" },
+    { nombre: "33 Questions per Minute", anio: 2000, imagen: "img/33questionsPerMinute.jpg" },
     { nombre: "Voz Alta", anio: 2008, imagen: "img/vozAlta.jpg" },
     { nombre: "Solar Equation", anio: 2010, imagen: "img/solarEquation.jpg" },
     { nombre: "Pan-Anthem", anio: 2015, imagen: "img/panAnthem.jpg" },
@@ -29,10 +29,3 @@ obras.forEach(obra => {
     contenedor.appendChild(item); // Agrega el elemento al contenedor de la galería
 });
 
-// Botón para cambiar diseño
-const boton = document.getElementById("cambiar-diseno");
-if (boton) {
-    boton.addEventListener("click", () => {
-        contenedor.classList.toggle("galeria-alternativa");
-    });
-}
