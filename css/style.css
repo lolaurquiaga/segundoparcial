@@ -89,51 +89,50 @@ nav ul li a:hover {
     flex: 1;
 }
 
-/* Galería */
+/* Galería de img*/
 .galeria-contenedor {
-  display: grid;                         
-  grid-template-columns: repeat(2, 1fr); /* 2 columnas */
-  gap: 2rem;                             /* separación entre cada obra */
-  justify-items: center;                 /* centra cada ítem */
+  display: flex;
+  flex-wrap: wrap;        
+  justify-content: center;/* centrar horizontalmente */
+  gap: 2rem;              /* separación entre obras */
 }
 
+/* Cada obra ocupe 1/3 del ancho */
 .obra-item {
+  flex: 0 0 30%;          /* tres columnas fijas */
   text-align: center;
 }
 
+/* Imagen base */
 .obra-item img {
-  width: 100%;            /* todas del mismo tamaño */
-  max-width: 300px;       /* tamaño máximo fijo */
-  border-radius: 6px;
-  transition: transform 0.3s ease; /* animación suave */
+  max-width: 100%;
+  border-radius: 0.5rem; /* bordes redondeados */
+  transition: transform 1s ease; /*busco que la imagen se agrande suavemente al hacer hover*/
 }
 
-.obra-item img:hover {
-  transform: scale(1.1);  /* agranda un poco al pasar el mouse */
+/* Hover: agranda imagen y muestra datos */
+.obra-item:hover img {
+  transform: scale(1.2); /* agranda imagen al hacer hover */
 }
 
-/* Ejercicio */
-form {
-    margin-top: 1rem;
+/* Datos ocultos por defecto */
+.obra-item h3,
+.obra-item p {
+  opacity: 0;
+  transition: opacity 1.5s ease;
+  margin-top: 0.5rem;
+  font-size: 2rem;
+  background-color: rgba(72, 71, 71, 0.6);
+  display: inline-block;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
 }
 
-form label, form input, form button {
-    display: block;
-    margin-bottom: 1rem;
+.obra-item:hover h3,
+.obra-item:hover p {
+  opacity: 1; /* muestra datos al hacer hover */
 }
 
-button {
-    background-color: #3399ff; /* azul acento */
-    color: #ffffff;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #267acc;
-}
 
 /* Datos curiosos */
 #curiosidades {
