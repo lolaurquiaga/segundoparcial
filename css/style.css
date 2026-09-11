@@ -16,7 +16,7 @@ body {
 .container {
     max-width: 80%;
     margin: 2rem auto;
-    background-color: rgba(50, 50, 50, 0.9); /* gris oscuro con transparencia */
+    background-color: rgba(50, 50, 50, 0.9); /*quiero mas transparencia*/
     padding: 2rem;
     border-radius: 8px;
 }
@@ -31,11 +31,11 @@ header h1 {
     font-family: 'Barlow', sans-serif; /* títulos con tipografía Google */
     font-size: 2.5rem;
     margin: 0;
-    color: #ffcc00; /* acento amarillo */
+    color: #ffcc00; /*este color se ve horrible*/
 }
 
 header img {
-    max-width: 200px;
+    max-width: 600px;
     border-radius: 8px;
     margin-top: 1rem;
 }
@@ -91,20 +91,25 @@ nav ul li a:hover {
 
 /* Galería */
 .galeria-contenedor {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
+  display: grid;                         
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+  gap: 2rem;                             /* separación entre cada obra */
+  justify-items: center;                 /* centra cada ítem */
 }
 
-.galeria-contenedor img {
-    max-width: 200px;
-    border-radius: 6px;
-    transition: transform 0.3s;
+.obra-item {
+  text-align: center;
 }
 
-.galeria-contenedor img:hover {
-    transform: scale(1.1);
+.obra-item img {
+  width: 100%;            /* todas del mismo tamaño */
+  max-width: 300px;       /* tamaño máximo fijo */
+  border-radius: 6px;
+  transition: transform 0.3s ease; /* animación suave */
+}
+
+.obra-item img:hover {
+  transform: scale(1.1);  /* agranda un poco al pasar el mouse */
 }
 
 /* Ejercicio */
@@ -127,6 +132,43 @@ button {
 }
 
 button:hover {
+    background-color: #267acc;
+}
+
+/* Datos curiosos */
+#curiosidades {
+    background-color: rgba(80, 80, 80, 0.8); /* gris más claro con transparencia */
+    border: 2px solid #ffcc00; 
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#curiosidades h2 {
+    font-family: 'Barlow', sans-serif;
+    color: #ffcc00;
+    margin-bottom: 1rem;
+}
+
+#curiosidades p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+#curiosidades button {
+    background-color: #3399ff;
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#curiosidades button:hover {
     background-color: #267acc;
 }
 
