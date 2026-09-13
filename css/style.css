@@ -41,7 +41,7 @@ header img {
 }
 
 /* Títulos secundarios */
-h2, h3, h4 {
+h2 {
     font-family: 'Barlow', sans-serif; 
     color: #ffcc00; 
 }
@@ -151,7 +151,7 @@ nav ul li a:hover {
 }
 
 #curiosidades p {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Arial', sans-serif;
     font-size: 1rem;
     color: #ffffff;
     margin-bottom: 1rem;
@@ -168,7 +168,7 @@ nav ul li a:hover {
 }
 
 #curiosidades button:hover {
-    background-color: #267acc;
+    background-color: #305f8e;
 }
 
 /* Pie de página */
